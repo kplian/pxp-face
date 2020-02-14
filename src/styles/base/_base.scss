@@ -1,0 +1,51 @@
+// rem
+@import './settings';
+
+html {
+    font-size: 62.5% ;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: $m-size;
+    // color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.h-screen {
+    height: 100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.bg-gray {
+    background: $gray-light;
+}
+
+.container-content {
+    max-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.grid-content {
+    max-height: calc( 100vh - 180px );
+    min-height: calc( 100vh - 180px );
+    height: auto;
+    overflow: auto;
+}
