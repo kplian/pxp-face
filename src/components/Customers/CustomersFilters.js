@@ -1,8 +1,7 @@
-import React, { useState, useEffect }  from 'react';
+import React, { useState, useEffect, useContext, useRef }  from 'react';
 import CustomersList from './CustomersList';
 import SearchFilter from '../Filters/SearchFilter';
 import { CustomersContext } from '../CustomersContext';
-
 
 const CustomersFilters = () => {
     const [hasError, setErrors] = useState(false);
@@ -25,6 +24,7 @@ const CustomersFilters = () => {
             fetchData();
         }
         filterData();
+        
     }, [ textFilter ]);
 
     const changeTextFilter = ( e ) => {
@@ -36,6 +36,7 @@ const CustomersFilters = () => {
         
         const filter = customers.filter( customer => customer.name.toLowerCase().includes(textFilter.toLowerCase()));
         setCustomersFilter( filter );
+
     };
 
     const initialState = {
@@ -47,6 +48,7 @@ const CustomersFilters = () => {
     return (
         <CustomersContext.Provider value={ initialState }>
             <div>
+                
                 <h1 className="text-primary">Listado de Clientes</h1>
 
                 { //<span className="bg-white">Has error: {JSON.stringify(hasError)}</span>
@@ -54,8 +56,7 @@ const CustomersFilters = () => {
                 <SearchFilter/>
                 <CustomersList customers={ customersFilter }/>
             </div>
-        </CustomersContext.Provider>
-        
+        </CustomersContext.Provider>         
     )
 };
 

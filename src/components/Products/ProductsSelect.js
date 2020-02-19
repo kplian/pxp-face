@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useLocation } from 'react-router-dom';
 import ProductsBox from './ProductsBox';
 import { ProductsContext } from './ProductsContext';
 
@@ -12,8 +13,8 @@ import { CartContext } from '../Cart/CartContext';
 
 
 const ProductsSelect = props => {
-    console.log( props )
-    const customer = props.location.customer ? props.location.customer : undefined;
+    const location = useLocation();
+    const customer = location && location.customer ? location.customer : undefined;
 
     const [hasError, setErrors] = useState(false);
     const [products, setProducts] = useState([]);
@@ -93,7 +94,7 @@ const ProductsSelect = props => {
                     <div className="row d-flex justify-content-between align-content-center">
                         <h1 className="text-primary">Selección de Productos</h1> 
                         <b className="text-danger">Desde:</b>
-                        <input type="date" value={ new Date() }/>
+                        <input type="date"/>
                         <b className="text-danger">Hasta:</b>
                         <input type="date"/>
                         <span className="d-flex align-content-center">

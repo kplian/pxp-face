@@ -11,6 +11,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
+    "clientpxpjs": "^1.0.2",
     "lodash": "^4.17.15",
     "material-icons-react": "^1.0.4",
     "node-sass": "^4.13.1",
