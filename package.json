@@ -14,7 +14,7 @@
     "clientpxpjs": "^1.0.2",
     "lodash": "^4.17.15",
     "material-icons-react": "^1.0.4",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
